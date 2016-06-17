@@ -71,8 +71,5 @@ class PropertyMetadata implements \Serializable
     public function unserialize($str)
     {
         list($this->class, $this->name) = unserialize($str);
-
-        $this->reflection = new \ReflectionProperty($this->class, $this->name);
-        $this->reflection->setAccessible(true);
     }
 }
